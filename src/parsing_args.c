@@ -6,7 +6,7 @@
 /*   By: hemaciel <hemaciel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/01 18:25:43 by hemaciel          #+#    #+#             */
-/*   Updated: 2026/01/01 18:25:46 by hemaciel         ###   ########.fr       */
+/*   Updated: 2026/01/02 20:00:46 by gelt             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,11 @@
 static char	**split_args(const char *s)
 {
 	char	**nptr;
-	int		i;
 
 	if (!s)
 		error_exit();
 	nptr = ft_split(s, ' ');
-	if (!nptr)
-		error_exit();
-	i = 0;
-	while (nptr[i])
-		i++;
-	if (i == 0)
+	if (!nptr || !nptr[0])
 	{
 		ft_free_array(nptr);
 		error_exit();
