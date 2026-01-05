@@ -6,25 +6,25 @@
 /*   By: hemaciel <hemaciel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/01 18:26:37 by hemaciel          #+#    #+#             */
-/*   Updated: 2026/01/01 18:26:39 by hemaciel         ###   ########.fr       */
+/*   Updated: 2026/01/05 08:41:31 by hemaciel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	main(int ac, char *av[])
+int	main(int argc, char *argv[])
 {
 	t_stack	*a;
 	int		size;
 	int		*nums;
 	int		*idx;
 
-	if (ac == 2)
-		a = parsing_str(av[1], &size, &nums);
-	else if (ac > 2)
+	if (argc == 2)
+		a = parsing_str(argv[1], &size, &nums);
+	else if (argc > 2)
 	{
-		size = ac - 1;
-		a = parsing_args(av, size, &nums);
+		size = argc - 1;
+		a = parsing_args(argv, size, &nums);
 	}
 	else
 		return (0);
