@@ -81,7 +81,6 @@ https://github.com/Niimphu/push_swap_visualiser
 ## 📚 Resources
 
 -   https://projects.intra.42.fr/projects/push_swap
--   https://mitpress.mit.edu/9780262046305/introduction-to-algorithms/
 -   https://www.geeksforgeeks.org/radix-sort/
 -   https://en.cppreference.com/w/c/language/operator_arithmetic
 -   https://www.tutorialspoint.com/data_structures_algorithms/linked_list_algorithms.htm
