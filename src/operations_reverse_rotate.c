@@ -6,13 +6,13 @@
 /*   By: hemaciel <hemaciel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/01 18:18:00 by hemaciel          #+#    #+#             */
-/*   Updated: 2026/01/01 18:18:04 by hemaciel         ###   ########.fr       */
+/*   Updated: 2026/01/03 09:35:11 by hemaciel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static t_stack	*stack_before_last(t_stack *s)
+static t_stack	*second_last_node(t_stack *s)
 {
 	if (!s || !s->next)
 		return (NULL);
@@ -23,16 +23,16 @@ static t_stack	*stack_before_last(t_stack *s)
 
 static void	reverse_rotate(t_stack **s)
 {
-	t_stack	*last;
-	t_stack	*before_last;
+	t_stack	*last_node;
+	t_stack	*second_last;
 
 	if (!s || !*s || !(*s)->next)
 		return ;
-	before_last = stack_before_last(*s);
-	last = before_last->next;
-	before_last->next = NULL;
-	last->next = *s;
-	*s = last;
+	second_last = second_last_node(*s);
+	last_node = second_last->next;
+	second_last->next = NULL;
+	last_node->next = *s;
+	*s = last_node;
 }
 
 void	rra_rrb_rrr(t_stack **a, t_stack **b, int operation)
