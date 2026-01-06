@@ -60,11 +60,13 @@ ARG="3 2 1"
 ``` bash
 ARG=$(shuf -i 0-999 -n 500 | tr '\n' ' ')
 ./push_swap $ARG | ./checker_OS $ARG
-```
+
 ARG=$(seq -1000 1000 | shuf -n 500 | tr '\n' ' ')
+./push_swap $ARG | ./checker_OS $ARG
 
 ARG=$(seq -1000 1000 | shuf -n 100 | tr '\n' ' ')
-
+./push_swap $ARG | ./checker_OS $ARG
+```
 ------------------------------------------------------------------------
 
 ## 👁️ Visualização gráfica
