@@ -1,4 +1,4 @@
-*This project has been created as part of the 42 curriculum by Henrique Reis / hemaciel
+*This project has been created as part of the 42 curriculum by Henrique Reis / hemaciel*
 
 # push_swap
 
